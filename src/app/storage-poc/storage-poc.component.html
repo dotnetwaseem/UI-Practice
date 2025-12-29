@@ -1,0 +1,15 @@
+<h2>Local & Session Storage POC</h2>
+
+<input type="text" [(ngModel)]="userName" placeholder="Enter name" />
+
+<br /><br />
+
+<button (click)="saveLocal()">Save in LocalStorage</button>
+<button (click)="saveSession()">Save in SessionStorage</button>
+
+<br /><br />
+
+<button (click)="readLocal()">Read LocalStorage</button>
+<button (click)="readSession()">Read SessionStorage</button>
+
+<p><b>Result:</b> {{ result }}</p>
