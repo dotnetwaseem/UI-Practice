@@ -16,8 +16,8 @@
         <div class="row g-3 mb-4">
 
           <div class="col-md-4">
-            <label class="form-label">Employee ID</label>
-            <input type="text" class="form-control" placeholder="EMP1001">
+            <label class="form-label">Employee Code</label>
+            <input type="text" class="form-control" [value]="employeeCode" readonly> 
           </div>
 
           <div class="col-md-4">
@@ -68,19 +68,27 @@
           </div>
 
           <div class="col-md-4">
-            <label class="form-label">Designation</label>
-            <input type="text" class="form-control" placeholder="Software Engineer">
+            <label class="form-label">Roles</label>
+            <select class="form-select">
+              <option value="">-- Select Role --</option>
+
+              @for (r of roles; track r.id) {
+              <option [value]="r.roleId">
+                {{ r.name }}
+              </option>
+              }
+            </select>
           </div>
 
           <div class="col-md-4">
             <label class="form-label">Reporting Manager</label>
-             <select class="form-select">
+            <select class="form-select">
               <option selected disabled>Select Type</option>
               <option value="1">Mr Jhon</option>
               <option value="2">XLALE</option>
               <option value="3">Mtomy</option>
             </select>
-          
+
           </div>
 
           <div class="col-md-4">
