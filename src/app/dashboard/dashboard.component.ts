@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+
 import { HeaderComponent } from "../header/header.component";
 import { DashboardDetailsComponent } from "../dashboard-details/dashboard-details.component";
 import { FooterComponent } from "../footer/footer.component";
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-dashboard',
